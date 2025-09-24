@@ -206,3 +206,28 @@ with open("check_even_odd.txt","r") as f:
         if (int(val)%2==0):
             count+=1
 print(count)
+# Writelines
+f=open("write.txt","w")
+line=["line: 1 \n","line: 2 \n","line: 3\n"]
+f.writelines(line)
+f.close()
+
+#seek()  tell()  truncate()
+
+f=open("dell.txt","r")
+
+f.seek(10) # read next 10 bytes
+
+print(f.tell()) # it tell the how many letter are seek
+
+data=f.read(5) # read after 5 bytes after apply seek()
+print(data)
+
+#truncate()
+f=open("Hp.txt","w")
+f.write("Hello World3")
+
+f.truncate(5)  # trancate is used for  how many bytes are print  
+f=open("Hp.txt","r")
+read=f.read()
+print(read)
